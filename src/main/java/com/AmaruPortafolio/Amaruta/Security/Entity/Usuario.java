@@ -17,10 +17,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.validation.constraints.NotNull;
 
-/**
- *
- * @author Am4ru
- */
+
 @Entity
 public class Usuario {
     
