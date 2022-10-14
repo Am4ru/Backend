@@ -1,14 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.AmaruPortafolio.Amaruta.Controller;
 
 import com.AmaruPortafolio.Amaruta.Entity.Persona;
 import com.AmaruPortafolio.Amaruta.Interface.IPersonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-
+@CrossOrigin(origins = "http://localhost:4200")
 public class PersonaController {
     @Autowired IPersonaService ipersonaService;
     
@@ -28,18 +25,19 @@ public class PersonaController {
         return ipersonaService.getPersona();
     }
     
+    @PreAuthorize("hasRole('admin')")
     @PostMapping("/personas/crear/")
     public String createPersona(@RequestBody Persona persona){
         ipersonaService.savePersona(persona);
         return "la persona fue creada correctamente";
     }
-    
+    @PreAuthorize("hasRole('admin')")
     @DeleteMapping("/personas/borrar/{id}/")
     public String deletePersona(@PathVariable Long id){
         ipersonaService.deletePersona(id);
         return "la persona fue eliminada correctamente";
     }
-    
+    @PreAuthorize("hasRole('admin')")
     @PutMapping("/personas/editar/{id}/")
     public Persona editPersona(@PathVariable Long id,
                        @RequestParam("nombre") String nuevoNombre, 
