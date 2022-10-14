@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logoap{
+    width: 130px;
+    background-color: #10121A;
+}
+img{
+    width: 30px;
+}
+
+/* para la vista de celular */
+@media(max-width: 575px){
+.container{
+    flex-direction: column;
+}
+.social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.social img{
+    margin: 0.2em;
+}
+}

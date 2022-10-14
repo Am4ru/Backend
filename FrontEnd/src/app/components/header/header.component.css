@@ -1,0 +1,12 @@
+div{
+    background-color: #10121A;
+  
+}
+app-socials{
+    float: right;
+    margin-top: 25px;
+}
+@font-face{
+    font-family: nani;
+    src: url("../../../assets/Kanit/Kanit-Medium.ttf");
+}

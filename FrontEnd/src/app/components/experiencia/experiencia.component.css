@@ -1,0 +1,12 @@
+.row{
+    padding: 20px;
+}
+div{
+    background-color: #10121A;
+    color: #da8300;
+    font-family: nani;
+}
+h1, h3{
+    display: inline;
+}
+
