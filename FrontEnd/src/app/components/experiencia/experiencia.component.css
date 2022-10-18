@@ -6,7 +6,8 @@ div{
     color: #da8300;
     font-family: nani;
 }
-h1, h3{
+h1, h2, h3{
     display: inline;
+    color: #da8300;
 }
 
