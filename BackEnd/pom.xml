@@ -11,7 +11,7 @@
     <groupId>com.AmaruPortafolio</groupId>
     <artifactId>Amaruta</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Amaruta</name>
+    <name>PortafolioWeb</name>
     <description>portafolio de prueba</description>
     <properties>
         <java.version>1.8</java.version>
